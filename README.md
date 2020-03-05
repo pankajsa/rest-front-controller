@@ -17,3 +17,8 @@ The microservice forwards the request to getQ if the authorization check is succ
 
 Absence of 'AuthHeader' in the HTTP REST request trigger the failure of authorization check and returns a error back to the caller
 
+curl -v -X GET http://localhost:9000/api/a
+will give a 401 Unauthorized Error
+
+curl -v -X GET -H "Authorization: TESTING" http://localhost:9000/api/a
+will forward the request to getQ, from where the RDP can take over and send the request downstream
