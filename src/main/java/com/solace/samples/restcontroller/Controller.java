@@ -59,7 +59,7 @@ public class Controller {
         // Check command line arguments
         if (args.length < 2 || args[1].split("@").length != 2) {
             System.out.println(
-                    "Usage: Controller <host:port> <client-username@message-vpn> <client-password> <start-id> <end-id>");
+                    "Usage: Controller <host:port> <client-username@message-vpn> <client-password>");
             System.out.println();
             System.exit(-1);
         }
