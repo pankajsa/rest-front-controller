@@ -13,5 +13,7 @@ e.g.
 gradle bootRun --args "localhost:55555 default@default"
 
 
+The microservice forwards the request to getQ if the authorization check is successful. RDP can use this queue to forward to a backend REST service
 
+Absence of 'AuthHeader' in the HTTP REST request trigger the failure of authorization check and returns a error back to the caller
 
